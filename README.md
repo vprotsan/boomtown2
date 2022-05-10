@@ -24,6 +24,7 @@ npm install
 npm start
 
 You will need to provide 2 variables:
+
 REACT_APP_API_URL - base url for organization
 REACT_APP_API_USERS_URL=https://api.github.com/users - base url for users
 
