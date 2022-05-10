@@ -1,0 +1,38 @@
+.description {
+    display: block;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.name {
+    display: block;
+    width: 155px;
+    text-align: left;
+}
+
+.language {
+    display: block;
+    width: 75px;
+}
+
+.button {
+    width: 55px;
+}
+
+.lastUpdated {
+    color: #379741;
+    font-weight: 700;
+    min-width: 160px;
+
+    @media only screen and (min-width: 980px){
+        width: 100px;
+    }
+}
+
+.date {
+    min-width: 160px;
+
+    @media only screen and (min-width: 980px){
+        width: 100px;
+    }
+}

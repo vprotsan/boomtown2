@@ -1,0 +1,23 @@
+.lastUpdated {
+    color: #379741;
+    font-weight: 700;
+    min-width: 160px;
+
+    @media only screen and (min-width: 980px){
+        width: 100px;
+    }
+}
+
+.date {
+    min-width: 160px;
+
+    @media only screen and (min-width: 980px){
+        width: 100px;
+    }
+}
+
+.avatar {
+    @media only screen and (min-width: 980px){
+        width: 50px;
+    }
+}

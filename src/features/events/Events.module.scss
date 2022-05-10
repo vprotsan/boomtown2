@@ -1,0 +1,23 @@
+.eventsType {
+    display: block;
+    width: 140px;
+}
+
+.date {
+    display: block;
+    min-width: 160px;
+
+    @media only screen and (min-width: 980px){
+        width: 100px;
+    }
+}
+
+.id {
+    display: block;
+    min-width: 138px;
+}
+
+.name {
+    display: block;
+    min-width: 240px;
+}

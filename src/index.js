@@ -2,9 +2,21 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import ReactDOM from 'react-dom/client';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import { Organization } from './features/organization/Organization';
+import { Repositories } from './features/repositiories/Repositories';
+import { Events } from './features/events/Events';
+import { Hooks } from './features/hooks/Hooks';
+import { Issues } from './features/issues/Issues';
+import { Members } from './features/members/Members';
+import { Member } from './features/member/Member';
+import { Error } from './features/error/Error';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -12,7 +24,18 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Organization />} />
+          <Route path="/organizations/:id/repos" element={<Repositories />} />
+          <Route path="/organizations/:id/events" element={<Events />} />
+          <Route path="/organizations/:id/hooks" element={<Hooks />} />
+          <Route path="/organizations/:id/issues" element={<Issues />} />
+          <Route path="/organizations/:id/members" element={<Members />} />
+          <Route path="/organizations/:id/members/:member" element={<Member />} />
+          <Route path="*" element={<Error msg="Sorry, we coudln't find the page you are looking for :(" />} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
