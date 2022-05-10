@@ -66,7 +66,7 @@ export function Repositories() {
           {
             Header: 'Team',
             accessor: row => row.team,
-            Cell: () => <button className={styles.button}>Team</button>
+            Cell: cell => <a href={cell.row.original.team} className={styles.button}>Team</a>
           },
           {
             Header: 'Is Private',
@@ -119,7 +119,10 @@ export function Repositories() {
         case 'failed':
           return repositoriesArrayError 
                 ? <Error msg= {repositoriesArrayError}/> 
-                : <Error msg="Sorry there was a problem :(  But we are on our way to fix it!"/>
+                : <Error msg="Sorry, there was a problem :(  But we are on our way to fix it!"/>
+
+        default:
+          <Error msg="Sorry, we cannot find a page you are looking for."/>
       }
     }
 
